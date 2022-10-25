@@ -21,14 +21,15 @@
 // Get all buttonos on the page
 const buttons = document.querySelectorAll("button");
 
+// The DOM (document object model) is what allows JS to understand HTML
 // Loop through the buttons and add a click event listener
 buttons.forEach(function (button) {
   button.addEventListener(
     "click",
 
     // Callback function
-    function () {
-      console.log("Button clicked!");
+    function (Event) {
+      console.log(event.target.innerText);
     }
   );
 });
